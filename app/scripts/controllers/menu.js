@@ -934,23 +934,26 @@ angular.module('icestudio')
     };
 
     $scope.about = function () {
-      var content = [
+      alertify.alert([
         '<div class="row">',
         '  <div class="col-sm-12">',
-        '    <h4>Icestudio</h4>',
-        '    <p>Version: ' + $scope.version + '</p>',
-        '    <p>License: GPL-2.0</p>',
+        '    <h4>Icestudio (<a class="action-open-url-external-browser" href="https://github.com/FPGAwars/icestudio">icestudio</a>)</h4>',
+        '    <p><i>Visual editor for Verilog designs</i></p>',
         '  </div>',
         '</div>',
-        '<div class="row" style="margin-top:30px;">',
+        '<div class="row" style="margin-top:15px;">',
+        '  <div class="col-sm-12">',
+        '    <p>Version: ' + $scope.version + '</p>',
+        '    <p>License: <a class="action-open-url-external-browser" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPL-2.0</a></p>',
+        '    <p>Documentation: <a class="action-open-url-external-browser" href="http://icestudio.rtfd.io">icestudio.rtdf.io</a></p>',
+        '  </div>',
+        '</div>',
+         '<div class="row" style="margin-top:15px;">',
         '  <div class="col-sm-12">',
         '    <p>Thanks to all the <a class="action-open-url-external-browser" href="https://github.com/juanmard/icestudio/contributors">contributors</a></p>',
         '  </div>',
-        '</div>'
-      ].join('\n');
-      alertify.alert(content);
+        '</div>'].join('\n'));
     };
-
 
     // Events
 
