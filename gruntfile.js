@@ -19,7 +19,7 @@
 
   function targetLin(bits) {
     platforms.push('linux' + bits);
-    distCommands.push('compress:linux' + bits, 'appimage:linux' + bits);
+    //distCommands.push('compress:linux' + bits, 'appimage:linux' + bits);
   }
   function targetWin(bits) {
     platforms.push('win' + bits);
