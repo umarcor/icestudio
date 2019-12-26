@@ -43,9 +43,7 @@
       "tinyfpgab",
       "tinyprog",
       "icefunprog"
-    ],
-    "external": "",
-    "branch": ""
+    ]
   },
   "collection": "0.3.3",
   "engines": {
