@@ -2,16 +2,17 @@
 
 var subModuleActive = false;
 
-angular.module('icestudio')
-        .controller('DesignCtrl', function ($rootScope,
-                $scope,
-                project,
-                profile,
-                graph,
-                gettextCatalog,
-                utils,
-                common) {
-
+export default class DesignController {
+  constructor(
+    $rootScope,
+    $scope,
+    project,
+    profile,
+    graph,
+    gettextCatalog,
+    utils,
+    common
+  ) {
                 $scope.graph = graph;
                 $scope.common = common;
                 $scope.profile = profile;
@@ -236,4 +237,5 @@ angular.module('icestudio')
 
                 });
 
-        });
+        }
+}

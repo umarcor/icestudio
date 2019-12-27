@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('icestudio')
-  .service('tools', function (project,
+export default class ToolsService {
+  constructor(
+    project,
     compiler,
     profile,
     collections,
@@ -20,7 +21,8 @@ angular.module('icestudio')
     nodeRSync,
     nodeAdmZip,
     _package,
-    $rootScope) {
+    $rootScope
+  ) {
 
     var taskRunning = false;
     var resources = [];
@@ -355,8 +357,9 @@ angular.module('icestudio')
           if (typeof common.DEBUGMODE !== 'undefined' &&
             common.DEBUGMODE === 1) {
 
-            const fs = require('fs');
-            fs.appendFileSync(common.LOGFILE, 'tools._executeLocal>' + command + "\n");
+            // !!! FIXME/TODO not available in browser
+            //const fs = require('fs');
+            //fs.appendFileSync(common.LOGFILE, 'tools._executeLocal>' + command + "\n");
           }
           nodeChildProcess.exec(command, {
               maxBuffer: 5000 * 1024
@@ -1325,6 +1328,7 @@ angular.module('icestudio')
 
     };
 
+<<<<<<< HEAD:app/scripts/services/tools.js
     this.initializePluginManager = function (callbackOnRun) {
       if (typeof ICEpm !== 'undefined') {
         console.log('ENV', common);
@@ -1362,3 +1366,7 @@ angular.module('icestudio')
     };
 
   });
+=======
+  }
+}
+>>>>>>> 63dc3a85... NON WORKING webpack:app/js/services/tools.js

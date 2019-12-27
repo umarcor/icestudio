@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('icestudio')
-  .controller('MenuCtrl', function ($rootScope,
+export default class MenuController {
+  constructor($rootScope,
     $scope,
     $timeout,
     boards,
@@ -17,8 +17,8 @@ angular.module('icestudio')
     gui,
     _package,
     nodeFs,
-    nodePath) {
-
+    nodePath
+  ) {
     //-- Initialize scope
 
     $scope.profile = profile;
@@ -39,7 +39,6 @@ angular.module('icestudio')
     var buildUndoStack = [];
     var changedUndoStack = [];
     var currentUndoStack = [];
-
 
     // Window events
     var win = gui.Window.get();
@@ -99,7 +98,7 @@ angular.module('icestudio')
       }
 
       if(params !==false){
-         for (prop in params) {
+        for (prop in params) {
           argv.push(params[prop]);
         }
       }
@@ -1092,4 +1091,5 @@ angular.module('icestudio')
 
 
 
-  });
+  }
+}

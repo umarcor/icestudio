@@ -6,7 +6,10 @@
     'index.html',
     'package.json',
     'fonts/**/*.*',
-    'node_modules/**/*.*',
+    //'node_modules/**/*.*',
+    //'js/**/*.*',
+    //'css/**/*.*',
+    'app/**/*.*',
     'resources/**/*.*',
     'scripts/**/*.*',
     'styles/**/*.*',
@@ -78,11 +81,11 @@
             'package.json',
             'resources/**',
             'views/*.html',
-            'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
+            //'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
             //> !!! TEMPORAL
             'app/main.*',
-            'js/**',
-            'css/**'
+            //'js/**',
+            //'css/**'
             //<
           ]
         },

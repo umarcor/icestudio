@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('icestudio')
-  .service('project', function ($rootScope,
+export default class ProjectService {
+  constructor(
+    $rootScope,
     graph,
     boards,
     compiler,
@@ -11,7 +12,8 @@ angular.module('icestudio')
     gui,
     gettextCatalog,
     nodeFs,
-    nodePath) {
+    nodePath
+  ) {
 
     this.name = '';  // Used in File dialogs
     this.path = '';  // Used in Save / Save as
@@ -425,7 +427,7 @@ angular.module('icestudio')
             return;
           }
           var name = utils.basename(filepath);
-          
+
           var block = _safeLoad(data, name);
            if (block) {
             var origPath = utils.dirname(filepath);
@@ -671,4 +673,5 @@ angular.module('icestudio')
       graph.resetCommandStack();
     };
 
-  });
+  }
+}
