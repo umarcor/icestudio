@@ -2,14 +2,14 @@
 
 angular.module('icestudio')
   .factory('gui', function() {
-    var gui = require('nw.gui');
-    return gui;
+    return require('nw.gui');
+    //return window.require('nw.gui');
   })
   .factory('window', function() {
-    var gui = require('nw.gui');
-    return gui.Window;
+    return require('nw.gui').Window;
+    //return window.require('nw.gui').Window;
   })
   .factory('_package', function() {
-    var _package = require('./package.json');
-    return _package;
+    return require('./package.json');
+    //return require('../../package.json');
   });

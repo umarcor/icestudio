@@ -1,6 +1,7 @@
 /* exported iprof */
 
 'use strict';
+
 var IceProfiler=function(){
     this.measures={};
     this.stats={};

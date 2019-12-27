@@ -77,13 +77,18 @@
             'index.html',
             'package.json',
             'resources/**',
-            'node_modules/**',
-            'views/*.html'
+            'views/*.html',
+            'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
+            //> !!! TEMPORAL
+            'app/main.*',
+            'js/**',
+            'css/**'
+            //<
           ]
         },
         {
           expand: true,
-          cwd: 'app/bower_components/bootstrap/fonts',
+          cwd: 'app/app/fonts',
           dest: 'dist/tmp/fonts',
           src: '*.*'
         }
