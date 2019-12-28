@@ -6,7 +6,7 @@
     'index.html',
     'package.json',
     'fonts/**/*.*',
-    'node_modules/**/*.*',
+    'app/main.*',
     'resources/**/*.*',
     'scripts/**/*.*',
     'styles/**/*.*',
@@ -78,11 +78,7 @@
             'package.json',
             'resources/**',
             'views/*.html',
-            'node_modules/**', // FIXME|TODO: SHOULD BE BUNDLED
-            //> !!! TEMPORAL
             'app/main.*',
-            'js/**',
-            'css/**'
             //<
           ]
         },
@@ -379,7 +375,6 @@
     'watch:scripts'
   ]);
   grunt.registerTask('dist', [
-    'checksettings',
     //'jshint',
     'clean:dist',
     'clean:toolchain',

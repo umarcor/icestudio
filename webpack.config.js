@@ -1,9 +1,10 @@
 'use strict';
 
+const webpack = require('webpack');
 const join = require('path').join;
 
 module.exports = {
-  entry: join(__dirname, 'app', 'js', 'app.js'),
+  entry: join(__dirname, 'app', 'app.js'),
   target: 'node',
   output: {
     path: join(__dirname, 'app', 'app'),
@@ -31,4 +32,18 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    //new HtmlWebpackPlugin({ template: './app/index.html' }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+  ],
+  //devServer: {
+  //  port: 5000,
+  //  contentBase: './src/',
+  //  historyApiFallback: true
+  //}
 };
