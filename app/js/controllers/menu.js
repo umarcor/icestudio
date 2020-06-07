@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('icestudio')
+angular.module('hwstudio')
   .controller('MenuCtrl', function ($rootScope,
     $scope,
     $timeout,
@@ -51,10 +51,8 @@ angular.module('icestudio')
     });
     // Darwin fix for shortcuts
     if (process.platform === 'darwin') {
-      var mb = new gui.Menu({
-        type: 'menubar'
-      });
-      mb.createMacBuiltin('Icestudio');
+      var mb = new gui.Menu({ type: 'menubar' });
+      mb.createMacBuiltin('hwstudio');
       win.menu = mb;
     }
 
@@ -65,18 +63,18 @@ angular.module('icestudio')
     setTimeout(function () {
 
       // Parse GET url parmeters for window instance arguments
-      // all arguments will be embeded in icestudio_argv param
+      // all arguments will be embeded in hwstudio_argv param
       // that is a JSON string url encoded
 
       // https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/unescape
       // unescape is deprecated javascript function, should use decodeURI instead
 
-      var queryStr = (window.location.search.indexOf('?icestudio_argv=')===0) ?
-        '?icestudio_argv='+atob(decodeURI(window.location.search.replace('?icestudio_argv=','')))+'&'
+      var queryStr = (window.location.search.indexOf('?hwstudio_argv=')===0) ?
+        '?hwstudio_argv='+atob(decodeURI(window.location.search.replace('?hwstudio_argv=','')))+'&'
       :
         decodeURI(window.location.search) + '&'
       ;
-      var regex = new RegExp('.*?[&\\?]icestudio_argv=(.*?)&.*');
+      var regex = new RegExp('.*?[&\\?]hwstudio_argv=(.*?)&.*');
       var val = queryStr.replace(regex, '$1');
 
       var params = (val === queryStr) ? false : val;
@@ -606,7 +604,7 @@ angular.module('icestudio')
         height: 700,
         'min_width': 300,
         'min_height': 300,
-        icon: 'resources/images/icestudio-logo.png'
+        icon: 'resources/images/logo.png'
       });
     };
 
@@ -622,7 +620,7 @@ angular.module('icestudio')
           height: 700,
           'min_width': 300,
           'min_height': 300,
-          icon: 'resources/images/icestudio-logo.png'
+          icon: 'resources/images/logo.png'
         });
       } else {
         alertify.warning(gettextCatalog.getString('{{board}} pinout not defined', {
@@ -656,7 +654,7 @@ angular.module('icestudio')
           height: 500,
           'min_width': 300,
           'min_height': 300,
-          icon: 'resources/images/icestudio-logo.png'
+          icon: 'resources/images/logo.png'
         });
       } else {
         alertify.error(gettextCatalog.getString('{{board}} rules not defined', {
@@ -682,7 +680,7 @@ angular.module('icestudio')
           height: 700,
           'min_width': 300,
           'min_height': 300,
-          icon: 'resources/images/icestudio-logo.png'
+          icon: 'resources/images/logo.png'
         });
       } else {
         alertify.error(gettextCatalog.getString('Collection {{collection}} info not defined', {
@@ -701,7 +699,7 @@ angular.module('icestudio')
         height: 400,
         'min_width': 300,
         'min_height': 300,
-        icon: 'resources/images/icestudio-logo.png'
+        icon: 'resources/images/logo.png'
       });
     };
 
@@ -891,20 +889,20 @@ angular.module('icestudio')
       alertify.alert([
         '<div class="row">',
         '  <div class="col-sm-12">',
-        '    <h4>Icestudio (<a class="action-open-url-external-browser" href="https://github.com/FPGAwars/icestudio">icestudio</a>)</h4>',
-        '    <p><i>Visual editor for Verilog designs</i></p>',
+        '    <h4>Hardware Studio (<a class="action-open-url-external-browser" href="https://github.com/umarcor/hwstudio">hwstudio</a>)</h4>',
+        '    <p><i>GUI editor for hardware description designers</i></p>',
         '  </div>',
         '</div>',
         '<div class="row" style="margin-top:15px;">',
         '  <div class="col-sm-12">',
         '    <p>Version: ' + $scope.version + '</p>',
         '    <p>License: <a class="action-open-url-external-browser" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPL-2.0</a></p>',
-        '    <p>Documentation: <a class="action-open-url-external-browser" href="http://icestudio.rtfd.io">icestudio.rtdf.io</a></p>',
+        '    <p>Documentation: <a class="action-open-url-external-browser" href="http://umarcor.github.io/hwstudio">umarcor.github.io/hwstudio</a></p>',
         '  </div>',
         '</div>',
          '<div class="row" style="margin-top:15px;">',
         '  <div class="col-sm-12">',
-        '    <p>Thanks to all the <a class="action-open-url-external-browser" href="https://github.com/juanmard/icestudio/contributors">contributors</a></p>',
+        '    <p>Thanks to all the <a class="action-open-url-external-browser" href="https://github.com/umarcor/hwstudio/contributors">contributors</a></p>',
         '  </div>',
         '</div>'].join('\n'));
     };

@@ -1,8 +1,8 @@
 {
-  "name": "icestudio",
-  "version": "nightly",
-  "description": "Visual editor for Verilog designs",
-  "repository": "https://github.com/FPGAwars/icestudio",
+  "name": "hwstudio",
+  "version": "0.5.1",
+  "description": "GUI editor for hardware description designs",
+  "repository": "https://github.com/umarcor/hwstudio",
   "license": "GPL-2.0",
   "scripts": {
     "lint": "grunt jshint",
