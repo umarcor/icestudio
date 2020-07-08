@@ -761,7 +761,7 @@ angular
 
       if (!common.selectedBoard) {
         common.selectedBoard = board;
-        _selectBoardNotify (board);
+        _selectBoardNotify(board);
       } else {
         if (common.selectedBoard.name !== name) {
           if (!graph.isEmpty()) {
