@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="None" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to... &mdash; Icestudio 0.5.1dev documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ICE format" href="source/project.html" />
+    <link rel="prev" title="Preferences" href="preferences.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Icestudio
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">Menus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collections.html">Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="board.html">Board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to...</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#take-a-snapshot">Take a snapshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-toolchain">Install the toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-the-toolchain">Update the toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-drivers">Install the drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-project">Create a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-a-bitstream">Upload a bitstream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-block">Create a block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-a-project-as-block">Add a project as block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-collection-package">Create a collection package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#include-a-list-file">Include a list file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#include-a-verilog-header-file">Include a verilog (header) file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-a-remote-host">Configure a remote host</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="source/project.html">ICE format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/rules.html">Board Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/compiler.html">Compilers</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Icestudio</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>How to...</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/howto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to">
+<span id="howto"></span><h1>How to...<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="take-a-snapshot">
+<h2>Take a snapshot<a class="headerlink" href="#take-a-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>Taking a <strong>png</strong> snapshot of the application is as easy as press <strong>Ctrl+P</strong>. A save dialog appears to set the name and the path of the captured image.</p>
+</div>
+<div class="section" id="install-the-toolchain">
+<h2>Install the toolchain<a class="headerlink" href="#install-the-toolchain" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Install Python ``&gt;=3.6``</strong></p></li>
+<li><p><strong>Launch the toolchain installation process</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Go to <strong>Edit &gt; Preferences &gt; Manage toolchain &gt; Install</strong>. Be patient for the toolchain installation.</p>
+<a class="reference internal image-reference" href="_images/howto_installtoolchain.png"><img alt="_images/howto_installtoolchain.png" class="align-center" src="_images/howto_installtoolchain.png" style="width: 400px;" /></a>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the toolchain is installed, the menu option changes to <em>Edit &gt; Preferences &gt; Manage toolchain &gt; Update*</em>. Also, the toolchain can be restored to default in <strong>Edit &gt; Preferences &gt; Manage toolchain &gt; Reset default</strong>.</p>
+</div>
+</div>
+<div class="section" id="update-the-toolchain">
+<h2>Update the toolchain<a class="headerlink" href="#update-the-toolchain" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Connect to the Internet</strong></p></li>
+<li><p><strong>Launch the toolchain updating process</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Go to <strong>Edit &gt; Preferences &gt; Manage toolchain &gt; Update</strong>. Be patient for the toolchain update.</p>
+</div></blockquote>
+</div>
+<div class="section" id="install-the-drivers">
+<h2>Install the drivers<a class="headerlink" href="#install-the-drivers" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Install the toolchain</strong> (required for Windows)</p></li>
+<li><p><strong>Enable the FTDI drivers</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Go to <strong>Edit &gt; Preferences &gt; Drivers &gt; Enable</strong>. Each OS has a different process. This configuration requires administration privileges.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Windows, an external application (<a class="reference external" href="https://zadig.akeo.ie/">Zadig</a>) is used. It replaces the existing FTDI driver of the <strong>Interface 0</strong> with <strong>libusbK</strong>.</p>
+<a class="reference internal image-reference" href="_images/zadig.png"><img alt="_images/zadig.png" class="align-center" src="_images/zadig.png" style="width: 400px;" /></a>
+<p>On macOS, this operation requires internet connection to allow <em>Homebrew</em> to install <code class="docutils literal notranslate"><span class="pre">libffi</span></code> and <code class="docutils literal notranslate"><span class="pre">libftdi</span></code> packages.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For reverting the configuration, go to <strong>Edit &gt; Preferences &gt; Drivers &gt; Disable</strong>.</p>
+</div>
+</div>
+<div class="section" id="create-a-project">
+<h2>Create a project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Create a new project</strong></p>
+<p>Go to <strong>Edit &gt; New</strong>. A new window will be opened.</p>
+<a class="reference internal image-reference" href="_images/howto_new.png"><img alt="_images/howto_new.png" class="align-center" src="_images/howto_new.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Add blocks</strong></p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/howto_demo.gif"><img alt="_images/howto_demo.gif" class="align-center" src="_images/howto_demo.gif" style="width: 400px;" /></a>
+<p>There are different types of blocks:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p><em>Input/Output blocks</em></p>
+<p>Click on <strong>Basic &gt; Input</strong> or <strong>Basic &gt; Output</strong>, write the block's name and press OK or Enter.</p>
+<p>Also, it can be configured as <strong>buses</strong> using the <code class="docutils literal notranslate"><span class="pre">[x:y]</span></code> notation (<code class="docutils literal notranslate"><span class="pre">x</span></code> is the most significant bit).</p>
+<a class="reference internal image-reference" href="_images/howto_io-fpga.png"><img alt="_images/howto_io-fpga.png" class="align-center" src="_images/howto_io-fpga.png" style="width: 400px;" /></a>
+<p>If these blocks are used to build generic blocks, they should be configured as <strong>virtual</strong> (green). Then, the FPGA pin selector won't be shown.</p>
+<a class="reference internal image-reference" href="_images/howto_io-virtual.png"><img alt="_images/howto_io-virtual.png" class="align-center" src="_images/howto_io-virtual.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Constant blocks</em></p>
+<p>Click on <strong>Basic &gt; Constant</strong>, write the block's name and press OK or Enter.</p>
+<p>These blocks can be configures as <strong>local</strong>. Then, this parameter won't be exported.</p>
+<a class="reference internal image-reference" href="_images/howto_constant.png"><img alt="_images/howto_constant.png" class="align-center" src="_images/howto_constant.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Memory blocks</em></p>
+<p>Click on <strong>Basic &gt; Memory</strong>, write the block's name and press OK or Enter.</p>
+<p>These blocks can be configures as <strong>local</strong>. Then, this parameter won't be exported. Also you can update the <strong>address format</strong> of the memory to be <em>binary</em>, <em>decimal</em> or <em>hexadecimal</em>.</p>
+<a class="reference internal image-reference" href="_images/howto_memory.png"><img alt="_images/howto_memory.png" class="align-center" src="_images/howto_memory.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Code blocks</em></p>
+<p>Click on <strong>Basic &gt; Code</strong>, add the code ports. Port names are separated by a comma. E.g.: <code class="docutils literal notranslate"><span class="pre">a,</span> <span class="pre">b</span></code>.</p>
+<a class="reference internal image-reference" href="_images/howto_code-prompt.png"><img alt="_images/howto_code-prompt.png" class="align-center" src="_images/howto_code-prompt.png" style="width: 400px;" /></a>
+<p>This block contains a text editor to write your module in verilog code. Module header and footer are not required.</p>
+<a class="reference internal image-reference" href="_images/howto_code.png"><img alt="_images/howto_code.png" class="align-center" src="_images/howto_code.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Info blocks</em></p>
+<p>Click on <strong>Basic &gt; Info</strong>.</p>
+<p>This block contains a text editor to add comments about the project in <strong>Markdown</strong> or <strong>HTML</strong>.</p>
+<a class="reference internal image-reference" href="_images/howto_info.png"><img alt="_images/howto_info.png" class="align-center" src="_images/howto_info.png" style="width: 400px;" /></a>
+<p>It can be rendered simply by double-clicking the block.</p>
+<a class="reference internal image-reference" href="_images/howto_info-render.png"><img alt="_images/howto_info-render.png" class="align-center" src="_images/howto_info-render.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Bit blocks</em></p>
+<p>Click on <strong>Bit &gt; 0</strong> or <strong>Bit &gt; 1</strong>.</p>
+<p>These blocks are low and high logic drivers.</p>
+<a class="reference internal image-reference" href="_images/howto_bit.png"><img alt="_images/howto_bit.png" class="align-center" src="_images/howto_bit.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Logic blocks</em></p>
+<p>Go to the <strong>Logic</strong> menu and select a block. This menu contains <strong>Gates</strong>, <strong>Combinational blocks</strong> and <strong>Sequential blocks</strong>.</p>
+<a class="reference internal image-reference" href="_images/howto_logic.png"><img alt="_images/howto_logic.png" class="align-center" src="_images/howto_logic.png" style="width: 400px;" /></a>
+</li>
+<li><p><em>Setup blocks</em></p>
+<p>Click on <strong>Setup &gt; Pull up</strong> or <strong>Setup &gt; Tri-state</strong>.</p>
+<p>The <em>Pull up</em> block must be connected to input ports in order to configure a pull up in the FPGA.</p>
+<a class="reference internal image-reference" href="_images/howto_setup.png"><img alt="_images/howto_setup.png" class="align-center" src="_images/howto_setup.png" style="width: 400px;" /></a>
+</li>
+</ol>
+</div></blockquote>
+<p>In this example we are going to implement an AND logic gate with its input/output pins connected to the FPGA I/O.</p>
+<a class="reference internal image-reference" href="_images/howto_bwire.png"><img alt="_images/howto_bwire.png" class="align-center" src="_images/howto_bwire.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p><strong>Connect the blocks</strong></p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/howto_wire.png"><img alt="_images/howto_wire.png" class="align-center" src="_images/howto_wire.png" style="width: 400px;" /></a>
+<ol class="arabic" start="4">
+<li><p><strong>Select your board</strong></p>
+<p>Go to <strong>Select &gt; Board</strong> and select the board from the list.</p>
+<a class="reference internal image-reference" href="_images/howto_board.png"><img alt="_images/howto_board.png" class="align-center" src="_images/howto_board.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Set FPGA I/O pins</strong></p>
+<p>Select all Input/Output blocks' pins.</p>
+<a class="reference internal image-reference" href="_images/howto_fpgapin.png"><img alt="_images/howto_fpgapin.png" class="align-center" src="_images/howto_fpgapin.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Save the project</strong></p>
+<p>Go to <strong>Edit &gt; Save as</strong> and select the project name, for example <em>myProject</em>.</p>
+<p>It will be saved as an <strong>.ice</strong> file.</p>
+<a class="reference internal image-reference" href="_images/howto_saveas.png"><img alt="_images/howto_saveas.png" class="align-center" src="_images/howto_saveas.png" style="width: 400px;" /></a>
+</li>
+</ol>
+</div>
+<div class="section" id="upload-a-bitstream">
+<h2>Upload a bitstream<a class="headerlink" href="#upload-a-bitstream" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Open a project</strong></p>
+<p>Go to <strong>Edit &gt; Open...</strong> and select an <strong>.ice</strong> file.</p>
+</li>
+<li><p><strong>Verify the project</strong></p>
+<p>Go to <strong>Tools &gt; Verify</strong>.</p>
+<p>This option checks the generated verilog code using <code class="docutils literal notranslate"><span class="pre">apio</span> <span class="pre">verify</span></code>.</p>
+<a class="reference internal image-reference" href="_images/howto_verify.png"><img alt="_images/howto_verify.png" class="align-center" src="_images/howto_verify.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Build the project</strong></p>
+<p>Go to <strong>Tools &gt; Build</strong>.</p>
+<p>This option generates a bitstream using <code class="docutils literal notranslate"><span class="pre">apio</span> <span class="pre">build</span></code>.</p>
+<a class="reference internal image-reference" href="_images/howto_build.png"><img alt="_images/howto_build.png" class="align-center" src="_images/howto_build.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Upload the project</strong></p>
+<p>Connect your FPGA board and press <strong>Tools &gt; Upload</strong>. This option uses <code class="docutils literal notranslate"><span class="pre">apio</span> <span class="pre">upload</span></code>.</p>
+<a class="reference internal image-reference" href="_images/howto_upload.png"><img alt="_images/howto_upload.png" class="align-center" src="_images/howto_upload.png" style="width: 400px;" /></a>
+</li>
+</ol>
+<p>After executing <em>Tools &gt; Verify</em>, <em>Tools &gt; Build</em> or <em>Tools &gt; Upload</em> you can see the executed command and the output in a new windows opened from <strong>View &gt; Command output</strong>.</p>
+<a class="reference internal image-reference" href="_images/howto_toolchain-output.png"><img alt="_images/howto_toolchain-output.png" class="align-center" src="_images/howto_toolchain-output.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="create-a-block">
+<h2>Create a block<a class="headerlink" href="#create-a-block" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Open a project</strong></p>
+<p>Go to <strong>Edit &gt; Open project</strong> and select an <strong>.ice</strong> file. It is recommended to set all the I/O ports non-FPGA ports (green) to create a block.</p>
+</li>
+</ol>
+<a class="reference internal image-reference" href="_images/howto_project.png"><img alt="_images/howto_project.png" class="align-center" src="_images/howto_project.png" style="width: 400px;" /></a>
+<ol class="arabic" start="2">
+<li><p><strong>Verify the project</strong></p>
+<p>Go to <strong>Tools &gt; Verify</strong>.</p>
+</li>
+</ol>
+<ol class="arabic" start="2">
+<li><p><strong>Add the project information</strong></p>
+<p>Go to <strong>Edit &gt; Preferences &gt; Project information</strong>.</p>
+<a class="reference internal image-reference" href="_images/project-info.png"><img alt="_images/project-info.png" class="align-center" src="_images/project-info.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Save the project</strong></p>
+<p>Go to <strong>Edit &gt; Save</strong>.</p>
+<a class="reference internal image-reference" href="_images/howto_save.png"><img alt="_images/howto_save.png" class="align-center" src="_images/howto_save.png" style="width: 400px;" /></a>
+</li>
+</ol>
+</div>
+<div class="section" id="add-a-project-as-block">
+<h2>Add a project as block<a class="headerlink" href="#add-a-project-as-block" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Open or create a new project</strong></p></li>
+<li><p><strong>Import the custom block</strong></p>
+<p>Go to <strong>Edit &gt; Add as block...</strong> and select an <strong>.ice</strong> file.</p>
+<a class="reference internal image-reference" href="_images/howto_addasblock.png"><img alt="_images/howto_addasblock.png" class="align-center" src="_images/howto_addasblock.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/howto_customblock.png"><img alt="_images/howto_customblock.png" class="align-center" src="_images/howto_customblock.png" style="width: 400px;" /></a>
+</li>
+<li><p><strong>Examine the custom block</strong></p>
+<p>Complex blocks can be examined by double clicking the block.</p>
+<a class="reference internal image-reference" href="_images/howto_examine.png"><img alt="_images/howto_examine.png" class="align-center" src="_images/howto_examine.png" style="width: 400px;" /></a>
+</li>
+</ol>
+</div>
+<div class="section" id="create-a-collection-package">
+<h2>Create a collection package<a class="headerlink" href="#create-a-collection-package" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Create one or more collections</strong></p></li>
+</ol>
+<p>You can use the <a class="reference external" href="https://github.com/FPGAwars/icm">icm cli tool</a> to create and update a collection.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Collection/
+├── blocks
+│   ├── category1
+│   │   ├── block1.ice
+│   │   └── subcategory1
+│   │       ├── block11.ice
+│   │       └── block12.ice
+│   └── category2
+│       └── block2.ice
+├── examples
+│   ├── example1.ice
+│   ├── example2.ice
+│   └── example3.ice
+├── locale
+│   ├── en
+│   │   └── en.po
+│   ├── es_ES
+│   │   └── es_ES.po
+│   └── translation.js
+├── LICENSE
+├── package.json
+└── README.md
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>ZIP all your collections</strong></p></li>
+</ol>
+<blockquote>
+<div><p>Create a ZIP file with all your created collections at the main level.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Collections.zip
+|
+├── Collections 1
+│   └── ...
+└── Collections 2
+    └── ...
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The file <strong>package.json</strong> must exists, and also the <strong>blocks</strong> directory and/or the <strong>examples</strong> directory. The <strong>locale</strong> directory is optional. More information in the <a class="reference external" href="https://github.com/FPGAwars/collection-default">Default collection</a>.</p>
+</div>
+</div>
+<div class="section" id="include-a-list-file">
+<h2>Include a list file<a class="headerlink" href="#include-a-list-file" title="Permalink to this headline">¶</a></h2>
+<p>If your code block contains a list file(s), for example:</p>
+<div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="nb">$readmemh</span><span class="p">(</span><span class="s">&quot;rom.list&quot;</span><span class="p">,</span> <span class="n">rom</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Save the ice project</strong></p></li>
+<li><p><strong>Copy the list file(s) to the project directory</strong></p></li>
+<li><p><strong>Build and upload the project</strong></p></li>
+</ol>
+<p>Also you can include explicitly a list file in the header of a code block:</p>
+<div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="c1">// @include rom.list</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="include-a-verilog-header-file">
+<h2>Include a verilog (header) file<a class="headerlink" href="#include-a-verilog-header-file" title="Permalink to this headline">¶</a></h2>
+<p>If your code block includes a verilog (header) file(s), for example:</p>
+<div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="c1">// @include lib.vh</span>
+<span class="c1">// @include math.v</span>
+
+<span class="no">`include</span> <span class="s">&quot;lib.vh&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Save the ice project</strong></p></li>
+<li><p><strong>Copy the verilog (header) file(s) to the project's directory</strong></p></li>
+<li><p><strong>Build and upload the project</strong></p></li>
+</ol>
+</div>
+<div class="section" id="configure-a-remote-host">
+<h2>Configure a remote host<a class="headerlink" href="#configure-a-remote-host" title="Permalink to this headline">¶</a></h2>
+<p>I you want to use a RPi (or another computer), e.g. <code class="docutils literal notranslate"><span class="pre">pi&#64;192.168.0.22</span></code>, first configure the host:</p>
+<ol class="arabic simple">
+<li><p><strong>Copy your SSH public key into the server</strong></p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen
+$ ssh-copy-id -i .ssh/id_rsa.pub pi@192.168.0.22
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Install apio on the server</strong></p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh pi@192.168.0.22
+$ sudo pip install -U apio
+$ apio install --all
+$ apio drivers --enable  <span class="c1"># For FTDI devices</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p><strong>Enter the host name in Icestudio, Edit &gt; Remote hostname</strong></p>
+<img alt="_images/howto_remotehost.png" src="_images/howto_remotehost.png" />
+</li>
+<li><p><strong>Now, Verify, Build and Upload tools will run on the selected host</strong></p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="source/project.html" class="btn btn-neutral float-right" title="ICE format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="preferences.html" class="btn btn-neutral float-left" title="Preferences" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2016-2020, Icestudio contributors
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.toggle > *').hide();
+    $('.toggle .header').show();
+    $('.toggle .header').click(function () {
+      $(this).parent().children().not('.header').toggle(400);
+      $(this).parent().children('.header').toggleClass('open');
+    });
+  });
+</script>
+
+
+</body>
+</html>
